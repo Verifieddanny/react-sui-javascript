@@ -16,23 +16,26 @@ A modern React JavaScript scaffold for building decentralized applications on th
 
 ## 🚀 Quick Start
 
-\`\`\`bash
 # Clone the repository
+```bash
 git clone <your-repo-url>
 cd react-sui-javascript
-
+```
 # Install dependencies
+```bash
 npm install
+```
 
 # Start development server
+```bash
 npm run dev
-\`\`\`
+```
 
 Open [http://localhost:5173](http://localhost:5173) to see your app.
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 ├── src/
 │   ├── components/            # React components
 │   ├── lib/smart-contract/    # Smart contract integration
@@ -49,34 +52,35 @@ Open [http://localhost:5173](http://localhost:5173) to see your app.
 ├── package.json               # Dependencies
 ├── tailwind.config.js         # Tailwind configuration
 └── vite.config.js             # Vite configuration
-\`\`\`
+```
 
 ## 🔧 Smart Contract Integration
 
 ### 1. Deploy Your Contract
 
-\`\`\`bash
+
 # Deploy to devnet
+```bash
 sui client publish --gas-budget 100000000
-\`\`\`
+```
 
 ### 2. Update Configuration
 
 Edit \`src/lib/smart-contract/config.json\`:
 
-\`\`\`json
+```json
 {
   "PACKAGE_ID": "0x_YOUR_PACKAGE_ID_HERE",
   "ADMIN_CAP": "0x_YOUR_ADMIN_CAP_HERE",
   "SHARED_OBJECT": "0x_YOUR_SHARED_OBJECT_HERE"
 }
-\`\`\`
+```
 
 ### 3. Create Transaction Builders
 
 Update \`src/lib/smart-contract/client-transactions.js\`:
 
-\`\`\`javascript
+```javascript
 export const clientTransactions = {
   createItem: (name, description, price) => {
     const transaction = new Transaction()
@@ -92,16 +96,16 @@ export const clientTransactions = {
     return transaction
   }
 }
-\`\`\`
+```
 
 ## 🔑 Environment Variables
 
 Create a \`.env.local\` file:
 
-\`\`\`bash
+```bash
 # Optional: For read-only queries
 VITE_QUERY_PRIVATE_KEY=your_private_key_here
-\`\`\`
+```
 
 ## 📦 Key Dependencies
 
@@ -114,8 +118,7 @@ VITE_QUERY_PRIVATE_KEY=your_private_key_here
 - **tailwindcss**: Utility-first CSS framework
 
 ## 🎯 Usage in Components
-
-\`\`\`javascript
+```javascript
 import { useSignAndExecuteTransaction } from '@mysten/dapp-kit'
 import { createItem, getItemInfo } from '@/lib/smart-contract'
 
@@ -133,38 +136,41 @@ const handleCreate = async () => {
     }
   )
 }
-\`\`\`
+```
 
 ## 🛠️ Development Scripts
 
-\`\`\`bash
+```bash
 # Development
 npm run dev          # Start development server
 npm run build        # Build for production
 npm run preview      # Preview production build
 npm run lint         # Run ESLint
-\`\`\`
+```
 
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
 
-\`\`\`bash
+
 # Install Vercel CLI
+```bash
 npm i -g vercel
+```
 
 # Deploy
-vercel
-\`\`\`
+
 
 ### Netlify
 
-\`\`\`bash
+
 # Build the project
+```bash
 npm run build
+```
 
 # Deploy the dist folder to Netlify
-\`\`\`
+
 
 ### Other Platforms
 
@@ -204,7 +210,7 @@ This project is licensed under the MIT License.
 ---
 
 **Built with ❤️ for the Sui ecosystem**
-\`\`\`
+
 
 Perfect! I've successfully converted the React TypeScript project to a pure React JavaScript project. Here are the key changes:
 
