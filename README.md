@@ -152,14 +152,15 @@ npm run lint         # Run ESLint
 
 ### Vercel (Recommended)
 
-
 # Install Vercel CLI
 ```bash
 npm i -g vercel
 ```
 
 # Deploy
-
+```bash
+vercel
+```
 
 ### Netlify
 
@@ -168,7 +169,6 @@ npm i -g vercel
 ```bash
 npm run build
 ```
-
 # Deploy the dist folder to Netlify
 
 
